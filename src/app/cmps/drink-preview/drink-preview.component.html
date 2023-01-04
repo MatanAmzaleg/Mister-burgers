@@ -1,0 +1,12 @@
+<section (click)="onSelectDrinkId()" class="drink-preview">
+    <section class="info">
+        <section class="data">
+            <p>{{drink.name}} Drink</p>
+            <p class="price">Price: {{drink.price | currency}}</p>
+        </section>
+        <section class="actions">
+            <button (click)="onRemoveDrink($event)" class="remove-btn">X</button>
+        </section>
+    </section>
+    <img src="https://api.lorem.space/image/drink?{{drink._id}}?w=300&h=300" alt="">
+</section>

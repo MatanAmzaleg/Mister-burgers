@@ -1,0 +1,10 @@
+<section class="order-list">
+    <h1 class="bolder">Your order:</h1>
+    <div *ngIf="!order?.length" class="no-order-section">
+        <h2 >Start loading your burgers because its getting hot in here🍔</h2>
+        <a routerLink=""><fa-icon  class="icon" [icon]="faHamburger"></fa-icon><span>Get back to menu</span> <fa-icon  class="icon" [icon]="faHamburger"></fa-icon></a>
+        <img src="https://c4.wallpaperflare.com/wallpaper/197/854/431/fire-burger-5k-steak-wallpaper-preview.jpg" alt="">
+    </div>
+    <order-preview *ngFor="let item of order" [item]="item"></order-preview>
+    <button (click)="onNavigatePay()">Lets Go</button>
+</section>

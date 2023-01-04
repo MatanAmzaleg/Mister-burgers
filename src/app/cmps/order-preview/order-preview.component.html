@@ -1,0 +1,10 @@
+<section *ngIf="item" class="order-preview">
+    <img src='https://api.lorem.space/image/{{isBurger(item) ? "burger" : "drink"}}?{{item._id}}?w=300&h=300' alt="">
+    <div class="info">
+        <div class="name">
+            <h1 class="bold">{{item.name}}</h1>
+            <fa-icon (click)="onRemoveItem(item._id)" class="icon" [icon]="faXmark"></fa-icon>
+        </div>
+        <h1 class="bolder">{{item.price | currency}}</h1>
+    </div>
+</section>

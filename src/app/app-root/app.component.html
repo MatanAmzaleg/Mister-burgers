@@ -1,0 +1,19 @@
+<section class="main-app">
+    <header class="container">
+        <h1>Burgers</h1>
+        <nav>
+            <a routerLink="/">Buregers</a>
+            <a routerLink="/drinks">Drinks</a>
+            <a routerLink="/about">About</a>
+            <a routerLink="/order"><fa-icon  class="icon" [icon]="faHamburger"></fa-icon>({{getItemsNum() | async}})</a>
+        </nav>
+    </header>
+    <main class="container">
+       <router-outlet></router-outlet>
+    </main>
+
+    <footer class="container">
+        <p>BurgersRights &copy;</p>
+    </footer>
+
+</section>

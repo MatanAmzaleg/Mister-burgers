@@ -1,0 +1,7 @@
+<section *ngIf="drink" class="drink-details">
+    <p class="title">{{drink.name}} Drink</p>
+    <img src="https://api.lorem.space/image/drink?{{drink._id}}?w=300&h=300" alt="">
+    <p >About: {{drink.about}}</p>
+    <p class="price">Price: {{drink.price | currency}}</p>
+    <button (click)="onAddToOrder(drink)" class="add-btn">Add to my order <fa-icon  class="icon" [icon]="faHamburger"></fa-icon></button>
+</section>

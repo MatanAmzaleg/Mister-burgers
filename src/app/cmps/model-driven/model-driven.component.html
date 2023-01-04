@@ -1,0 +1,31 @@
+<section class="model-driven flex column">
+    <form [formGroup]="form">
+        <h2>Enter your details</h2>
+        <div class="flex mb-2">
+            <h3>Receivers name:</h3>
+            <input formControlName="first" placeholder="First name" />
+            <input formControlName="last" class="ml-2" placeholder="Last name" />
+        </div>
+        <div class="flex mb-2">
+            <p>Phone number:</p>
+            <input formControlName="phone" type="number" placeholder="05?-????-???" />
+        </div>
+        <div formArrayName="addresses">
+            <div *ngFor="let address of addresses.controls; let idx = index" [formGroupName]="idx">
+                <p>Address</p>
+                <input formControlName="city" placeholder="City" class="flex-three" />
+                <div class="flex align-center">
+                    <input formControlName="street" class="mb-2" placeholder="Street" />
+                    <input formControlName="floor" class="mb-2" placeholder="Floor" />
+
+                </div>
+            </div>
+        </div>
+        <textarea  formControlName="note" placeholder="Enter your note here..." class="form-textarea" cols="30" rows="10"></textarea>
+        <br /> <br />
+        <div align="end">
+            <button md-button color="primary" type="submit">SUBMIT</button>
+        </div>
+    </form>
+    <button class="return-btn" (click)="onReturnToOrder()"><fa-icon class="icon" [icon]="faXmark"></fa-icon></button>
+</section>

@@ -1,0 +1,12 @@
+<section (click)="onSelectBurgerId()" class="burger-preview">
+    <section class="info">
+        <section class="data">
+            <p>{{burger.name}} Burger</p>
+            <p class="price">Price: {{burger.price | currency}}</p>
+        </section>
+        <section class="actions">
+            <button (click)="onRemoveBurger($event)" class="remove-btn">X</button>
+        </section>
+    </section>
+    <img src="https://api.lorem.space/image/burger?{{burger._id}}?w=300&h=300" alt="">
+</section>

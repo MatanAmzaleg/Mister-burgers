@@ -1,0 +1,6 @@
+<section class="burger-filter">
+    <form >
+        <h1>Search your burger</h1>
+        <input class="search-input"  [(ngModel)]="burgerFilter.term" (ngModelChange)="onSetFilter()"  type="text" name="term" id="term" placeholder="Search a burger...">
+    </form>
+</section>

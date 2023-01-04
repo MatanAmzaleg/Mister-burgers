@@ -1,0 +1,7 @@
+<section class="burger-list">
+    <ngx-masonry style="min-width:1200px;" [options]="masonryOptions" [ordered]="true">
+        <burger-preview ngxMasonryItem (onRemove)="onRemove.emit($event)" (onSelect)="onSelect.emit($event)" *ngFor="let burger of burgers" [burger]="burger"></burger-preview>
+    </ngx-masonry>
+</section>
+
+

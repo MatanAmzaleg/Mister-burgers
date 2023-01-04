@@ -1,0 +1,8 @@
+<section class="drink-app">
+    <drink-details [drinkId]="selectedDrinkId" *ngIf="selectedDrinkId; else drinkList"></drink-details>
+
+    <ng-template #drinkList>
+        <drink-filter></drink-filter>
+        <drink-list (onRemove)="onRemoveDrink($event)" (onSelect)="onSelectDrinkId($event)" [drinks]="drinks$ | async"></drink-list>
+    </ng-template>
+</section>

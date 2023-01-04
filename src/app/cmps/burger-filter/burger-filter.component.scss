@@ -1,0 +1,14 @@
+.burger-filter {
+  margin-bottom: 30px;
+
+  form {
+
+    input {
+        width: 35%;
+        height: 40px;
+    }
+    > *:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+}

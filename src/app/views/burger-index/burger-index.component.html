@@ -1,0 +1,10 @@
+<section class="burger-app">
+    <burger-details [burgerId]="selectedBurgerId" *ngIf="selectedBurgerId; else burgerList"></burger-details>
+
+    <ng-template #burgerList>
+        <burger-filter></burger-filter>
+        <burger-list (onRemove)="onRemoveBurger($event)" (onSelect)="onSelectBurgerId($event)" [burgers]="burgers$ | async"></burger-list>
+    </ng-template>
+</section>
+
+<router-outlet></router-outlet>

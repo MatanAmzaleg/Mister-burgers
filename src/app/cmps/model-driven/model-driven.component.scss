@@ -1,0 +1,22 @@
+.model-driven{
+    form{
+
+        h2{
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        >*:not(p){
+            margin-block: 20px;
+        }
+    }
+
+    .return-btn{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        transition: scale 0.3s;
+       &:hover{
+        scale: 1.1;
+       } 
+    }
+}

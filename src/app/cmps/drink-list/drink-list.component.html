@@ -1,0 +1,3 @@
+<section class="drink-list">
+           <drink-preview (onRemove)="onRemove.emit($event)" (onSelect)="onSelect.emit($event)" *ngFor="let drink of drinks" [drink]="drink"></drink-preview>
+</section>

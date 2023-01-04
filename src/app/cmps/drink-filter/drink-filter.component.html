@@ -1,0 +1,6 @@
+<section class="drink-filter">
+    <form >
+        <h1>Search your drink</h1>
+        <input class="search-input"  [(ngModel)]="drinkFilter.term" (ngModelChange)="onSetFilter()"  type="text" name="term" id="term" placeholder="Search a drink...">
+    </form>
+</section>
