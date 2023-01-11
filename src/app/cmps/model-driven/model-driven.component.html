@@ -2,7 +2,7 @@
     <form [formGroup]="form">
         <h2>Enter your details</h2>
         <div class="flex mb-2">
-            <h3>Receivers name:</h3>
+            <p>Receivers name:</p>
             <input formControlName="first" placeholder="First name" />
             <input formControlName="last" class="ml-2" placeholder="Last name" />
         </div>
@@ -22,9 +22,10 @@
             </div>
         </div>
         <textarea  formControlName="note" placeholder="Enter your note here..." class="form-textarea" cols="30" rows="10"></textarea>
+        <h1>Total: {{totalAmount | currency}}</h1>
         <br /> <br />
         <div align="end">
-            <button md-button color="primary" type="submit">SUBMIT</button>
+            <button md-button color="primary" type="submit">Pay <fa-icon class="icon" [icon]="faDollar"></fa-icon></button>
         </div>
     </form>
     <button class="return-btn" (click)="onReturnToOrder()"><fa-icon class="icon" [icon]="faXmark"></fa-icon></button>

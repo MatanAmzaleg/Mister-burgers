@@ -8,6 +8,28 @@
         >*:not(p){
             margin-block: 20px;
         }
+
+        p{
+            font-weight: 600;
+        }
+
+        h1{
+            font-weight: bolder;
+            text-decoration: underline;
+            font-size: 20px;
+        }
+        input{
+            height: 40px;
+            width: 200px;
+            margin-inline: 15px;
+        }
+
+        textarea{
+            resize: none;
+            width: 350px;
+            padding: 15px;
+            height: 150px;
+        }
     }
 
     .return-btn{

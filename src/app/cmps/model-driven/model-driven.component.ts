@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
+import { faDollar } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -12,14 +13,16 @@ import { Router } from '@angular/router';
 export class ModelDrivenComponent implements OnInit {
     form!: FormGroup
     addresses!: FormArray
+    @Input() totalAmount! :number 
 
     faXmark = faXmark
+    faDollar = faDollar
 
     constructor(private fb: FormBuilder, private router:Router) {
         this.form = this.fb.group({
             first: ['', [Validators.required], []], // [initialVal, validators, asyncValidators]
             last: '',
-            phone: '',
+            phone: '05',
             addresses: this.getAddressArray(),
             note: '',
         })
