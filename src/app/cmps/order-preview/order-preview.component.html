@@ -5,6 +5,7 @@
             <h1 class="bold">{{item.name}}</h1>
             <fa-icon (click)="onRemoveItem(item._id)" class="icon" [icon]="faXmark"></fa-icon>
         </div>
+        <p>{{item.about}}</p>
         <h1 class="bolder">{{item.price | currency}}</h1>
     </div>
 </section>

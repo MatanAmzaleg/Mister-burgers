@@ -19,6 +19,12 @@
     }
   }
 
+  p{
+    font-size: 12px;
+    text-align: left;
+    padding-inline-start: 20px;
+    color: rgb(146, 146, 146);
+  }
   .info {
     display: flex;
     flex-direction: column;
